@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('title', 'Peserta | Admin Sippeka')
+@section('title', 'Peserta | Admin BLKM Jabar')
 
 @section('content')
     <!-- Page Wrapper -->
@@ -10,7 +10,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center loadPage" href="{{ route('admin.dashboard') }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center loadPage"
+                href="{{ route('admin.dashboard') }}">
                 <div class="sidebar-brand-text mx-3">Admin SIPPEKA</div>
             </a>
 
@@ -54,8 +55,8 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item ">
-                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Kelola Keahlian</span>
                 </a>
@@ -64,7 +65,8 @@
                         <a class="collapse-item loadPage" href="{{ route('admin.mata_soal') }}">Mata Soal Keahlian</a>
                         <a class="collapse-item loadPage" href="{{ route('admin.kelas_keahlian') }}">Kelas Keahlian</a>
                         <a class="collapse-item loadPage" href="{{ route('admin.tes_keahlian') }}">Tes Keahlian</a>
-                        <a class="collapse-item loadPage" href="{{ route('admin.sesi_tes_keahlian') }}">Sesi Tes Keahlian</a>
+                        <a class="collapse-item loadPage" href="{{ route('admin.sesi_tes_keahlian') }}">Sesi Tes
+                            Keahlian</a>
                     </div>
                 </div>
             </li>
@@ -162,7 +164,8 @@
                     <h1 class="h3 mb-3 text-gray-800 ">Data Peserta</h1>
 
                     @if ($listPendaftar->isNotEmpty())
-                        <a href="{{ route('admin.peserta.cetak') }}" class="btn btn-warning btn-sm mb-3">Cetak Data Peserta</a>
+                        <a href="{{ route('admin.peserta.cetak') }}" class="btn btn-warning btn-sm mb-3">Cetak Data
+                            Peserta</a>
 
                         <div class="row">
                             <div class="col-md-12">
@@ -189,7 +192,8 @@
                                                         : ($item->nilai_keahlian + $item->nilai_wawancara) / 2;
                                             @endphp
                                             <tr style="text-align: center; vertical-align: middle;">
-                                                <td>{{ $index + 1 + ($listPendaftar->currentPage() - 1) * $listPendaftar->perPage() }}</td>
+                                                <td>{{ $index + 1 + ($listPendaftar->currentPage() - 1) * $listPendaftar->perPage() }}
+                                                </td>
                                                 <td style="text-align: left;">{{ $item->nama }}</td>
                                                 <td style="text-align: left;">{{ $item->alamat }}</td>
                                                 <td style="text-align: left;">{{ $item->keahlian_nama }}</td>
@@ -208,7 +212,8 @@
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <a href="{{ route('admin.detail_peserta.cetak', ['user_id' => $item->user_id]) }}" class="btn btn-warning btn-sm">Cetak</a>
+                                                    <a href="{{ route('admin.detail_peserta.cetak', ['user_id' => $item->user_id]) }}"
+                                                        class="btn btn-warning btn-sm">Cetak</a>
                                                 </td>
                                             </tr>
                                         @endforeach

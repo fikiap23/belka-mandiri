@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Halaman Utama | Sippeka')
+@section('title', 'Halaman Utama | BLK Mandiri')
 
 @section('content')
     <style>
         .carousel-item img {
-            max-height: 500px;
+            max-height: 80vh;
             /* Batasi tinggi gambar */
             object-fit: cover;
             /* Agar gambar tetap proporsional */
@@ -28,7 +28,7 @@
     </style>
 
     <main class="main">
-
+        <!-- Hero  Section -->
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -40,24 +40,24 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src={{ asset('assets/user/img/about-company-1.jpg') }} class="d-block w-100"
-                        alt={{ asset('assets/user/img/about-company-1.jpg') }}>
+                    <img src={{ asset('assets/user/img/artikel1.jpg') }} class="d-block w-100"
+                        alt={{ asset('assets/user/img/artikel1.jpg') }}>
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>BALAI LATIHAN KERJA MANDIRI</h5>
+                        <p>DINAS TENAGA KERJA DAN TRANSMIGRASI PROV. JAWA BARAT</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src={{ asset('assets/user/img/about-company-2.jpg') }} class="d-block w-100"
-                        alt={{ asset('assets/user/img/about-company-2.jpg') }}>
+                    <img src={{ asset('assets/user/img/blmkm_family.png') }} class="d-block w-100"
+                        alt={{ asset('assets/user/img/blmkm_family.png') }}>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src={{ asset('assets/user/img/about-company-3.jpg') }} class="d-block w-100"
-                        alt={{ asset('assets/user/img/about-company-3.jpg') }}>
+                    <img src={{ asset('assets/user/img/artikel2.jpg') }} class="d-block w-100"
+                        alt={{ asset('assets/user/img/artikel2.jpg') }}>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
                         <p>Some representative placeholder content for the third slide.</p>
@@ -73,6 +73,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!-- End Hero  Section -->
 
         <!-- Featured Services Section -->
         <section id="featured-services" class="featured-services section">
@@ -82,7 +83,8 @@
                         <div class="service-item d-flex">
                             <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
                             <div>
-                                <h4 class="title"><a href="#" class="stretched-link">Balai Latihan Kerja</a></h4>
+                                <h4 class="title"><a href="#" class="stretched-link">Balai Latihan Kerja Mandiri</a>
+                                </h4>
                                 <p class="description">Fasilitas yang disediakan pemerintah dalam memberikan
                                     pelatihan keterampilan kepada masyarakat.</p>
                             </div>

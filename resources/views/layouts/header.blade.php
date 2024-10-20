@@ -52,7 +52,7 @@
         }
     }
 </style>
-<header id="header" class="header d-flex align-items-center sticky-top">
+<header id="header" class="header d-flex align-items-center sticky-top" style="margin: 0; padding: 8px">
     <div class="container-fluid container-xl position-relative d-flex align-items-center ">
         <a href="{{ route('home') }}" class="d-flex align-items-center me-auto">
             <img src="{{ asset('assets/system/img/logo.png') }}" alt="logo" style="width: 75px" />

@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('title', 'Tes Keahlian | Admin Sippeka')
+@section('title', 'Tes Keahlian | Admin BLKM Jabar')
 
 @section('content')
     <!-- Page Wrapper -->
@@ -10,7 +10,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center loadPage" href="{{ route('admin.dashboard') }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center loadPage"
+                href="{{ route('admin.dashboard') }}">
                 <div class="sidebar-brand-text mx-3">Admin SIPPEKA</div>
             </a>
 
@@ -54,8 +55,8 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item ">
-                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Kelola Keahlian</span>
                 </a>
@@ -64,7 +65,8 @@
                         <a class="collapse-item loadPage" href="{{ route('admin.mata_soal') }}">Mata Soal Keahlian</a>
                         <a class="collapse-item loadPage" href="{{ route('admin.kelas_keahlian') }}">Kelas Keahlian</a>
                         <a class="collapse-item active loadPage" href="{{ route('admin.tes_keahlian') }}">Tes Keahlian</a>
-                        <a class="collapse-item loadPage" href="{{ route('admin.sesi_tes_keahlian') }}">Sesi Tes Keahlian</a>
+                        <a class="collapse-item loadPage" href="{{ route('admin.sesi_tes_keahlian') }}">Sesi Tes
+                            Keahlian</a>
                     </div>
                 </div>
             </li>
@@ -217,8 +219,8 @@
                                                             class="btn btn-secondary btn-sm loadPage">Lihat</a>
                                                         <a href="{{ route('admin.tes_keahlian.edit', ['id' => $item->id]) }}"
                                                             class="btn btn-primary btn-sm loadPage">Ubah</a>
-                                                        <button type="button"
-                                                            class="btn btn-danger btn-sm btn-hapus" data-id="{{ $item->id }}"
+                                                        <button type="button" class="btn btn-danger btn-sm btn-hapus"
+                                                            data-id="{{ $item->id }}"
                                                             data-nama="{{ $item->nama_tes }}">Hapus</button>
                                                     </form>
                                                 </td>

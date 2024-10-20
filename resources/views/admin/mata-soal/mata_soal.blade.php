@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('title', 'Mata Soal | Admin Sippeka')
+@section('title', 'Mata Soal | Admin BLKM Jabar')
 
 @section('content')
     <!-- Page Wrapper -->

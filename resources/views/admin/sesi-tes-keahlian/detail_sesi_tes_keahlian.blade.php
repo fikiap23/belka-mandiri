@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('title', 'Detail Sesi Tes Keahlian | Admin Sippeka')
+@section('title', 'Detail Sesi Tes Keahlian | Admin BLKM Jabar')
 
 @section('content')
     <!-- Page Wrapper -->
@@ -10,7 +10,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center loadPage" href="{{ route('admin.dashboard') }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center loadPage"
+                href="{{ route('admin.dashboard') }}">
                 <div class="sidebar-brand-text mx-3">Admin SIPPEKA</div>
             </a>
 
@@ -54,8 +55,8 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item ">
-                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Kelola Keahlian</span>
                 </a>
@@ -64,7 +65,8 @@
                         <a class="collapse-item loadPage" href="{{ route('admin.mata_soal') }}">Mata Soal Keahlian</a>
                         <a class="collapse-item loadPage" href="{{ route('admin.kelas_keahlian') }}">Kelas Keahlian</a>
                         <a class="collapse-item loadPage" href="{{ route('admin.tes_keahlian') }}">Tes Keahlian</a>
-                        <a class="collapse-item active loadPage" href="{{ route('admin.sesi_tes_keahlian') }}">Sesi Tes Keahlian</a>
+                        <a class="collapse-item active loadPage" href="{{ route('admin.sesi_tes_keahlian') }}">Sesi Tes
+                            Keahlian</a>
                     </div>
                 </div>
             </li>
@@ -184,10 +186,10 @@
                                                 <td>{{ $sesiTesKeahlian->jenis_sesi }}</td>
                                             </tr>
                                             @if ($sesiTesKeahlian->jenis_sesi === 'Seleksi')
-                                            <tr>
-                                                <th>Durasi (Menit)</th>
-                                                <td>{{ $durasi }} Menit</td>
-                                            </tr>
+                                                <tr>
+                                                    <th>Durasi (Menit)</th>
+                                                    <td>{{ $durasi }} Menit</td>
+                                                </tr>
                                             @endif
                                             <tr>
                                                 <th>Mulai</th>
@@ -231,7 +233,8 @@
                                                         @foreach ($peserta as $index => $participant)
                                                             <tr style="text-align: center; vertical-align: middle;">
                                                                 <td>{{ $index + 1 }}</td>
-                                                                <td style="text-align: left;">{{ $participant->nama }}</td>
+                                                                <td style="text-align: left;">{{ $participant->nama }}
+                                                                </td>
                                                                 <td>{{ $participant->keahlian }}</td>
                                                                 <td>
                                                                     @if ($participant->waktu_mulai)

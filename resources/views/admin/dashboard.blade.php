@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('title', 'Dashboard Admin | Admin Sippeka')
+@section('title', 'Dashboard Admin | Admin BLKM Jabar')
 
 @section('content')
     <!-- Page Wrapper -->
@@ -10,7 +10,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center loadPage" href="{{ route('admin.dashboard') }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center loadPage"
+                href="{{ route('admin.dashboard') }}">
                 <div class="sidebar-brand-text mx-3">Admin SIPPEKA</div>
             </a>
 
@@ -54,8 +55,8 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item ">
-                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Kelola Keahlian</span>
                 </a>
@@ -64,7 +65,8 @@
                         <a class="collapse-item loadPage" href="{{ route('admin.mata_soal') }}">Mata Soal Keahlian</a>
                         <a class="collapse-item loadPage" href="{{ route('admin.kelas_keahlian') }}">Kelas Keahlian</a>
                         <a class="collapse-item loadPage" href="{{ route('admin.tes_keahlian') }}">Tes Keahlian</a>
-                        <a class="collapse-item loadPage" href="{{ route('admin.sesi_tes_keahlian') }}">Sesi Tes Keahlian</a>
+                        <a class="collapse-item loadPage" href="{{ route('admin.sesi_tes_keahlian') }}">Sesi Tes
+                            Keahlian</a>
                     </div>
                 </div>
             </li>
@@ -144,7 +146,8 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="{{ route('auth.logout') }}" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="{{ route('auth.logout') }}" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Keluar
                                 </a>
@@ -232,54 +235,55 @@
                     <div class="row">
                         <div class="col-md-12">
                             @if ($listPendaftarBaru->isNotEmpty())
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover mt-3">
-                                    <thead class="thead-dark">
-                                        <tr style="text-align: center; vertical-align: middle;">
-                                            <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Alamat</th>
-                                            <th>Keahlian</th>
-                                            <th>Waktu Mendaftar</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($listPendaftarBaru as $index => $item)
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover mt-3">
+                                        <thead class="thead-dark">
                                             <tr style="text-align: center; vertical-align: middle;">
-                                                <td>{{ $index + 1 + ($listPendaftarBaru->currentPage() - 1) * $listPendaftarBaru->perPage() }}</td>
-                                                <td style="text-align: left;">{{ $item->nama }}</td>
-                                                <td style="text-align: left;">{{ $item->alamat }}</td>
-                                                <td>{{ $item->keahlian_nama }}</td>
-                                                <td>{{ $item->created_at->setTimeZone('Asia/Jakarta')->format('d M Y H:i') }}
-                                                </td>
+                                                <th>No</th>
+                                                <th>Nama</th>
+                                                <th>Alamat</th>
+                                                <th>Keahlian</th>
+                                                <th>Waktu Mendaftar</th>
                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($listPendaftarBaru as $index => $item)
+                                                <tr style="text-align: center; vertical-align: middle;">
+                                                    <td>{{ $index + 1 + ($listPendaftarBaru->currentPage() - 1) * $listPendaftarBaru->perPage() }}
+                                                    </td>
+                                                    <td style="text-align: left;">{{ $item->nama }}</td>
+                                                    <td style="text-align: left;">{{ $item->alamat }}</td>
+                                                    <td>{{ $item->keahlian_nama }}</td>
+                                                    <td>{{ $item->created_at->setTimeZone('Asia/Jakarta')->format('d M Y H:i') }}
+                                                    </td>
+                                                </tr>
                                             @endforeach
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
 
-                                <br>
-                                <!-- Pagination -->
-                                {{ $listPendaftarBaru->links('vendor.pagination.pagination_custom') }}
+                                    <br>
+                                    <!-- Pagination -->
+                                    {{ $listPendaftarBaru->links('vendor.pagination.pagination_custom') }}
                                 @else
-                                <h4 class="text-center mt-4">Tidak ada pendaftar baru dalam 24 jam terakhir</h4>
-                                @endif
-                            </div>
+                                    <h4 class="text-center mt-4">Tidak ada pendaftar baru dalam 24 jam terakhir</h4>
+                            @endif
                         </div>
                     </div>
-
-
-                    <!-- Content Row -->
-
-
-                    <!-- /.container-fluid -->
-
                 </div>
-                <!-- End of Main Content -->
+
+
+                <!-- Content Row -->
+
+
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Main Content -->
 
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
     </div>
 @endsection

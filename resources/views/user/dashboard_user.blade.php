@@ -1,6 +1,6 @@
 @extends('layouts.user_app')
 
-@section('title', auth()->user()->username . ' | Sippeka User')
+@section('title', auth()->user()->username . ' BLK Mandiri User')
 
 @section('content')
     <!-- ======= Header ======= -->

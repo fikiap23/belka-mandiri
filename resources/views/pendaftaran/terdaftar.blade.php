@@ -1,6 +1,6 @@
 @extends('layouts.pendaftaran_app')
 
-@section('title', 'Terdaftar | Sippeka')
+@section('title', 'Terdaftar | BLKM Jabar')
 
 @section('content')
     <div class="container">
@@ -19,7 +19,8 @@
                                         <h1 class="h4 text-gray-900 mb-4">Anda Sudah Terdaftar</h1>
                                     </div>
 
-                                    <a href="{{ route('home') }}" class="btn btn-primary btn-user btn-block mt-5">Kembali Ke Halaman Utama</a>
+                                    <a href="{{ route('home') }}" class="btn btn-primary btn-user btn-block mt-5">Kembali Ke
+                                        Halaman Utama</a>
                                 </div>
                             </div>
                         </div>

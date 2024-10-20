@@ -1,6 +1,6 @@
 @extends('layouts.user_app')
 
-@section('title', 'Login Tes Seleksi | Sippeka User')
+@section('title', 'Login Tes Seleksi BLK Mandiri User')
 
 @section('content')
     <!-- ======= Header ======= -->
@@ -83,7 +83,8 @@
             <!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link loadPage" href="{{ route('user.seleksi_login', ['username' => auth()->user()->username]) }}">
+                <a class="nav-link loadPage"
+                    href="{{ route('user.seleksi_login', ['username' => auth()->user()->username]) }}">
                     <i class="bi bi-clipboard2-check"></i>
                     <span>Tes Seleksi</span>
                 </a>

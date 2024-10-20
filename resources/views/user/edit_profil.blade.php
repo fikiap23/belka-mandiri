@@ -1,6 +1,6 @@
 @extends('layouts.user_app')
 
-@section('title', 'Login Tes Seleksi | Sippeka User')
+@section('title', 'Login Tes Seleksi BLK Mandiri User')
 
 @section('content')
     <!-- ======= Header ======= -->
@@ -92,7 +92,8 @@
             <!-- End Nilai Nav -->
 
             <li class="nav-item">
-                <a class="nav-link loadPage" href="{{ route('user.edit_profil', ['username' => auth()->user()->username]) }}">
+                <a class="nav-link loadPage"
+                    href="{{ route('user.edit_profil', ['username' => auth()->user()->username]) }}">
                     <i class="bi bi-person-fill-gear"></i>
                     <span>Edit Profil</span>
                 </a>
