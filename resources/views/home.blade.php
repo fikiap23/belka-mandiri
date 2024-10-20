@@ -3,29 +3,76 @@
 @section('title', 'Halaman Utama | Sippeka')
 
 @section('content')
+    <style>
+        .carousel-item img {
+            max-height: 500px;
+            /* Batasi tinggi gambar */
+            object-fit: cover;
+            /* Agar gambar tetap proporsional */
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Background hitam semi-transparan */
+            padding: 15px;
+            /* Padding agar teks tidak terlalu menempel */
+            border-radius: 10px;
+            /* Sedikit sudut membulat untuk tampilan lebih rapi */
+        }
+
+        .carousel-caption h5,
+        .carousel-caption p {
+            color: white;
+            /* Warna teks putih agar kontras dengan background */
+        }
+    </style>
+
     <main class="main">
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section">
-            <div class="hero-bg">
-                <img src="{{ asset('assets/user/img/hero-bg-light.webp') }}" alt="">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
-            <div class="container text-center">
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <h1 data-aos="fade-up">Selamat datang di <span>SIPPEKA</span></h1>
-                    <p data-aos="fade-up" data-aos-delay="100">Sistem Informasi Pendaftaran Pelatihan Pekerja<br></p>
-                    <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#about" class="btn-get-started">Selengkapnya</a>
-                        <a href="https://youtu.be/fXYErrQAdVg?si=Fz8_QiY4QM5HdHYF"
-                            class="glightbox btn-watch-video d-flex align-items-center"><i
-                                class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src={{ asset('assets/user/img/about-company-1.jpg') }} class="d-block w-100"
+                        alt={{ asset('assets/user/img/about-company-1.jpg') }}>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
                     </div>
-                    <img src="{{ asset('assets/user/img/hero-services-img.webp') }}" class="img-fluid hero-img" alt=""
-                        data-aos="zoom-out" data-aos-delay="300">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src={{ asset('assets/user/img/about-company-2.jpg') }} class="d-block w-100"
+                        alt={{ asset('assets/user/img/about-company-2.jpg') }}>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src={{ asset('assets/user/img/about-company-3.jpg') }} class="d-block w-100"
+                        alt={{ asset('assets/user/img/about-company-3.jpg') }}>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- /Hero Section -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
         <!-- Featured Services Section -->
         <section id="featured-services" class="featured-services section">
@@ -99,15 +146,18 @@
                     <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
                         <div class="row gy-4">
                             <div class="col-lg-6">
-                                <img src="{{ asset('assets/user/img/about-company-1.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/user/img/about-company-1.jpg') }}" class="img-fluid"
+                                    alt="">
                             </div>
                             <div class="col-lg-6">
                                 <div class="row gy-4">
                                     <div class="col-lg-12">
-                                        <img src="{{ asset('assets/user/img/about-company-2.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/user/img/about-company-2.jpg') }}" class="img-fluid"
+                                            alt="">
                                     </div>
                                     <div class="col-lg-12">
-                                        <img src="{{ asset('assets/user/img/about-company-3.jpg') }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('assets/user/img/about-company-3.jpg') }}" class="img-fluid"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -123,27 +173,32 @@
             <div class="container" data-aos="fade-up">
                 <div class="row gy-4">
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets/user/img/silastri/logo_jatim.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/user/img/silastri/logo_jatim.png') }}" class="img-fluid"
+                            alt="">
                     </div>
                     <!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets/user/img/silastri/logo_disnakertrans.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/user/img/silastri/logo_disnakertrans.png') }}" class="img-fluid"
+                            alt="">
                     </div>
                     <!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets/user/img/silastri/logo_berakhlak.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/user/img/silastri/logo_berakhlak.png') }}" class="img-fluid"
+                            alt="">
                     </div>
                     <!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets/user/img/silastri/logo_bangga.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/user/img/silastri/logo_bangga.png') }}" class="img-fluid"
+                            alt="">
                     </div>
                     <!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets/user/img/silastri/logo_zona_integritas.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/user/img/silastri/logo_zona_integritas.png') }}" class="img-fluid"
+                            alt="">
                     </div>
                     <!-- End Client Item -->
 
@@ -297,7 +352,8 @@
                             <div>
                                 <h3>Realisasi Anggaran Tahun 2024</h3>
                                 <p>Realisasi Anggaran Tahun 2024.</p>
-                                <a href="#" class="read-more stretched-link">Cek Disini<i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="read-more stretched-link">Cek Disini<i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -309,7 +365,8 @@
                             <div>
                                 <h3>Realisasi PAD Tahun 2024</h3>
                                 <p>Realisasi PAD Tahun 2024.</p>
-                                <a href="#" class="read-more stretched-link">Cek Disini<i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="read-more stretched-link">Cek Disini<i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -321,7 +378,8 @@
                             <div>
                                 <h3>Data Pelatihan Tahun 2024</h3>
                                 <p>Data Pelatihan Tahun 2024.</p>
-                                <a href="#" class="read-more stretched-link">Cek Disini<i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="read-more stretched-link">Cek Disini<i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -333,7 +391,8 @@
                             <div>
                                 <h3>Data Penempatan Tahun 2024</h3>
                                 <p>Data Penempatan Tahun 2024.</p>
-                                <a href="#" class="read-more stretched-link">Cek Disini<i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="read-more stretched-link">Cek Disini<i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -345,7 +404,8 @@
                             <div>
                                 <h3>Layanan Pengaduan</h3>
                                 <p>Layanan Pengaduan Internal dan Eksternal (SP4N Lapor) Tahun 2024.</p>
-                                <a href="#" class="read-more stretched-link">Cek Disini<i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="read-more stretched-link">Cek Disini<i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -359,7 +419,8 @@
                                 <p>Mencakup Survei Kepuasan Masyarakat, Survei Persepsi Kualitas Pelayanan (SPKP) dan Survei
                                     Persepsi Anti Korupsi (SPAK),
                                     Survei Kualitas Penyelenggaraan Pelatihan serta Survei Penempatan Alumni Tahun 2024.</p>
-                                <a href="#" class="read-more stretched-link">Cek Disini<i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="read-more stretched-link">Cek Disini<i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -371,7 +432,8 @@
                             <div>
                                 <h3>Realisasi Kinerja Tahun 2024</h3>
                                 <p>Realisasi Kinerja Tahun 2024.</p>
-                                <a href="#" class="read-more stretched-link">Cek Disini<i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="read-more stretched-link">Cek Disini<i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
