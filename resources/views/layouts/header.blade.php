@@ -62,9 +62,9 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="#hero" class="active">Beranda</a></li>
-                <li><a href="#about">Program Pelatihan</a></li>
-                <li><a href="#features">Alumni</a></li>
-                <li><a href="#services">Tantang Kami</a></li>
+                <li><a href="/program-pelatihan">Program Pelatihan</a></li>
+                <li><a href="/alumni">Alumni</a></li>
+                <li><a href="/tentang-kami">Tentang Kami</a></li>
                 <li><a href="#services">Informasi</a></li>
                 @auth
                     <li class="mobile-only">

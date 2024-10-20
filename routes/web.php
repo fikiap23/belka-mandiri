@@ -21,6 +21,10 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/program-pelatihan', [HomeController::class, 'pelatihan'])->name('pelatihan');
+Route::get('/alumni', [HomeController::class, 'alumni'])->name('alumni');
+Route::get('/tentang-kami', [HomeController::class, 'tentang_kami'])->name('tentang_kami');
+Route::get('/informasi', [HomeController::class, 'infromasi'])->name('infromasi');
 
 // Otentikasi login dan register akun
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('auth.register');
@@ -36,7 +40,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin/kelola-data', [AdminController::class, 'kelolaData'])->name('admin.kelola_data');
     Route::get('/admin/peserta', [AdminController::class, 'peserta'])->name('admin.peserta');
     Route::get('/admin/peserta/cetak', [AdminController::class, 'cetakPeserta'])->name('admin.peserta.cetak');
-    Route::get('/admin/info-user', [AdminController::class, 'infoUser'])->name('admin.info_user');    
+    Route::get('/admin/info-user', [AdminController::class, 'infoUser'])->name('admin.info_user');
     Route::get('/admin/peserta/{user_id}/cetak', [AdminController::class, 'cetakDetailPendaftar'])->name('admin.detail_peserta.cetak');
     Route::get('/admin/kelola-data/pendaftar/{user_id}', [AdminController::class, 'detailPendaftar'])->name('admin.detail_pendaftar');
     Route::post('/admin/kelola-data/pendaftar/{user_id}', [AdminController::class, 'validasiTesWawancara'])->name('admin.validasi_wawancara');
